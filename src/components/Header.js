@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ cartItems }) => {
   return (
     <header className='row block center'>
       <div>
@@ -10,6 +10,7 @@ const Header = () => {
       </div>
       <div className='links'>
         <a href='/cart'>Cart</a>
+        <button className='badge'>{cartItems.length}</button>
         <a href='/signin'>SignIn</a>
       </div>
     </header>
